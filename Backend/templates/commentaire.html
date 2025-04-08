@@ -1,0 +1,108 @@
+<style>
+.voeu {
+    font-family: Arial;
+    background-color: #fcefee;
+    padding: 2rem;
+}
+.voeu_container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+form {
+    margin-bottom: 2rem;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+}
+.message {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+</style>
+{% extends "base.html"%}
+{% block title %} commentaire {% endblock %}
+
+{% block content %}
+<div class="voeu_container,voeu">
+  
+
+    
+    <div class="container">
+        <div class="album py-5 bg-body-tertiary">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="message">
+            <strong>william</strong> a écrit :<br>
+             </div>
+              <div class="card-body">
+                <p class="card-text"><em>joyeux anniversaire à toi !
+
+                    En ce jour si spécial, je prends un moment pour te souhaiter tout ce qu’il y a de plus beau dans la vie : la santé, la paix intérieure, des projets qui t’enthousiasment, des rencontres enrichissantes et beaucoup de bonheur au quotidien.
+                    
+                    Chaque nouvelle année est une page blanche à écrire, et je suis sûr(e) que tu continueras à la remplir avec sagesse, bienveillance et authenticité. Tu es une personne unique, avec une lumière qui mérite d’être vue et célébrée.
+                    
+                    Que cette journée soit à ton image : pleine de joie, de sourires, de bons moments, entouré(e) des gens que tu aimes.
+                    
+                    Continue de croire en toi, de rêver grand, et de vivre pleinement chaque instant. Tu as déjà accompli tant de choses, et le meilleur est encore à venir.
+                    
+                    Encore un très joyeux anniversaire – que cette nouvelle année de ta vie soit exceptionnelle ! 🥳🎉🎁</em></p>
+          
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <div class="message">
+              <strong>Papa</strong> a écrit :<br>
+               </div>
+                <div class="card-body">
+                  <p class="card-text"><em>joyeux anniversaire à toi !
+  
+                      En ce jour si spécial, je prends un moment pour te souhaiter tout ce qu’il y a de plus beau dans la vie : la santé, la paix intérieure, des projets qui t’enthousiasment, des rencontres enrichissantes et beaucoup de bonheur au quotidien.
+                      
+                      Chaque nouvelle année est une page blanche à écrire, et je suis sûr(e) que tu continueras à la remplir avec sagesse, bienveillance et authenticité. Tu es une personne unique, avec une lumière qui mérite d’être vue et célébrée.
+                      
+                      Que cette journée soit à ton image : pleine de joie, de sourires, de bons moments, entouré(e) des gens que tu aimes.
+                      
+                      Continue de croire en toi, de rêver grand, et de vivre pleinement chaque instant. Tu as déjà accompli tant de choses, et le meilleur est encore à venir.
+                      
+                      Encore un très joyeux anniversaire – que cette nouvelle année de ta vie soit exceptionnelle ! 🥳🎉🎁</em></p>
+            
+                </div>
+              </div>
+            </div>
+            </div>
+
+            
+          </div>
+    </div>
+      
+
+
+        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" method="post" action="/login">
+            <div class="form-floating mb-3">
+              <textarea type="text" class="form-control" id="floatingInput" placeholder="laisser un voeux " 
+              name="username" 
+              > </textarea>
+              <label for="floatingInput">voeux</label>
+            </div>
+           
+           
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Envoyer</button>
+          
+          </form>
+        
+        
+</div>
+
+{% endblock %}

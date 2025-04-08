@@ -1,0 +1,47 @@
+.birthday-section {
+    display: flex;
+    justify-content: space-between; /* Assure que les deux blocs sont espacés */
+    align-items: center;
+    height: 100vh; /* Hauteur de la page */
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .birthday-text {
+    flex: 1;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 50%; /* Limite la largeur du texte */
+  }
+  
+  .birthday-text h1 {
+    color: #e91e63;
+    font-size: 2.8em;
+    margin-bottom: 20px;
+  }
+  
+  .birthday-text p {
+    color: #444;
+  }
+  
+  .birthday-image {
+    flex: 1;
+    text-align: center;
+    height: 100vh; /* L'image prend toute la hauteur */
+    width: 50%; /* Prend aussi 50% de la largeur */
+    overflow: hidden; /* Pour éviter que l'image déborde */
+  }
+  
+  .birthday-image img {
+    max-width: 100%;
+    height: 100%;
+    /*border-radius: 20px;
+   /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-height: 400px; /* Limite la taille de l'image */
+    object-fit: cover; /* L'image couvre tout l'espace sans déformer l'aspect */
+    object-position: center;
+  }
+  
+ 
