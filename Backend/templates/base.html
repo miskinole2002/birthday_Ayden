@@ -25,18 +25,33 @@
     
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="./" class="nav-link px-2 link-secondary">Home</a></li>
-            <li><a href="./commentaire" class="nav-link px-2">commentaires</a></li>
+            <li><a href="./commentaires" class="nav-link px-2">commentaires</a></li>
             <li><a href="#" class="nav-link px-2">Galeries</a></li>
             <li><a href="./about" class="nav-link px-2">About</a></li>
-            {% if username  %}
-            <li><a href="#" class="nav-link px-2">Ajouter photo</a></li>
-            {%endif%}
+          
           </ul>
+
+          {% if username  %}
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+              <strong> bienvenue {{username.nom }} {{username.prenom }}</strong>
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+              <li><a class="dropdown-item" href="#">Ajouter photo</a></li>
+              <li><a class="dropdown-item" href="./adduser">Aujout utilisateur</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a type="button"  class="dropdown-item   btn-outline-danger me-2" href="./logout">deconnexion</a></li>
+            </ul>
+          </div>
+          <!-- {%endif%}
+
           {% if username  %}
           <div class="col-md-3 text-end">
-            <a href="./logout" type="button" class="btn btn-outline-primary me-2">deconnection</a>
+            <a href="./logout" type="button" class="btn btn-outline-danger me-2">deconnection</a>
            
-          </div>
+          </div> -->
         {%else%}
           <div class="col-md-3 text-end">
             <a href="./login" type="button" class="btn btn-outline-primary me-2">connection</a>
@@ -60,7 +75,7 @@
     
         <ul class="nav col-md-4 justify-content-end">
           <li class="nav-item"><a href="./" class="nav-link px-2 text-body-secondary">Home</a></li>
-          <li class="nav-item"><a href="./commentaire" class="nav-link px-2 text-body-secondary">commentaires</a></li>
+          <li class="nav-item"><a href="./commentaires" class="nav-link px-2 text-body-secondary">commentaires</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">galeries</a></li>
           <li class="nav-item"><a href="./about" class="nav-link px-2 text-body-secondary">About</a></li>
        
@@ -70,3 +85,4 @@
   </body>
 
     
+  

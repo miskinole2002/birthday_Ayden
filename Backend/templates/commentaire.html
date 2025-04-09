@@ -35,64 +35,45 @@ textarea {
     
     <div class="container">
         <div class="album py-5 bg-body-tertiary">
+          {% if response %}
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              {% for item in response %}
+
           <div class="col">
             <div class="card shadow-sm">
               <div class="message">
-            <strong>william</strong> a écrit :<br>
+            <strong>{{item.nom}}</strong> <br>
              </div>
               <div class="card-body">
-                <p class="card-text"><em>joyeux anniversaire à toi !
-
-                    En ce jour si spécial, je prends un moment pour te souhaiter tout ce qu’il y a de plus beau dans la vie : la santé, la paix intérieure, des projets qui t’enthousiasment, des rencontres enrichissantes et beaucoup de bonheur au quotidien.
-                    
-                    Chaque nouvelle année est une page blanche à écrire, et je suis sûr(e) que tu continueras à la remplir avec sagesse, bienveillance et authenticité. Tu es une personne unique, avec une lumière qui mérite d’être vue et célébrée.
-                    
-                    Que cette journée soit à ton image : pleine de joie, de sourires, de bons moments, entouré(e) des gens que tu aimes.
-                    
-                    Continue de croire en toi, de rêver grand, et de vivre pleinement chaque instant. Tu as déjà accompli tant de choses, et le meilleur est encore à venir.
-                    
-                    Encore un très joyeux anniversaire – que cette nouvelle année de ta vie soit exceptionnelle ! 🥳🎉🎁</em></p>
+                <p class="card-text"><em>{{item.commentaire}}</em></p>
           
               </div>
             </div>
           </div>
-          </div>
+          {% endfor %}
+        </div>
 
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-              <div class="card shadow-sm">
-                <div class="message">
-              <strong>Papa</strong> a écrit :<br>
-               </div>
-                <div class="card-body">
-                  <p class="card-text"><em>joyeux anniversaire à toi !
-  
-                      En ce jour si spécial, je prends un moment pour te souhaiter tout ce qu’il y a de plus beau dans la vie : la santé, la paix intérieure, des projets qui t’enthousiasment, des rencontres enrichissantes et beaucoup de bonheur au quotidien.
-                      
-                      Chaque nouvelle année est une page blanche à écrire, et je suis sûr(e) que tu continueras à la remplir avec sagesse, bienveillance et authenticité. Tu es une personne unique, avec une lumière qui mérite d’être vue et célébrée.
-                      
-                      Que cette journée soit à ton image : pleine de joie, de sourires, de bons moments, entouré(e) des gens que tu aimes.
-                      
-                      Continue de croire en toi, de rêver grand, et de vivre pleinement chaque instant. Tu as déjà accompli tant de choses, et le meilleur est encore à venir.
-                      
-                      Encore un très joyeux anniversaire – que cette nouvelle année de ta vie soit exceptionnelle ! 🥳🎉🎁</em></p>
-            
-                </div>
-              </div>
-            </div>
-            </div>
+         
+        {% endif %}
 
             
-          </div>
+      </div>
     </div>
       
 
 
-        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" method="post" action="/login">
+        <form   class="p-4 p-md-5 border rounded-3 bg-body-tertiary" method="post" action="/commentaires">
+          <H3><em>laissez un voeux</em></H3>
+          <div  class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="nom" 
+            name="username"
+            >
+            <label for="floatingInput">nom</label>
+          </div>
+
             <div class="form-floating mb-3">
-              <textarea type="text" class="form-control" id="floatingInput" placeholder="laisser un voeux " 
-              name="username" 
+              <textarea  style="height: 200px " type="text" class="form-control" id="floatingInput" placeholder="laisser un voeux " 
+              name="commentaire"
               > </textarea>
               <label for="floatingInput">voeux</label>
             </div>
@@ -106,3 +87,6 @@ textarea {
 </div>
 
 {% endblock %}
+
+
+  
